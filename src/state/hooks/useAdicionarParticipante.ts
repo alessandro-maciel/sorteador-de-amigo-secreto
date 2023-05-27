@@ -10,6 +10,10 @@ export default function useAdicionarParticipante(){
     if (lista.find((participante) => participante === nomeDoParticipante)) {
       setError('Noms duplicados não são permitidos');
 
+      setTimeout(() => {
+        setError('');
+      }, 5000);
+
       return;
     }
 

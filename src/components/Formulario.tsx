@@ -7,7 +7,7 @@ export default function Formulario(){
   const inputRef = useRef<HTMLInputElement>(null)
   const adicionarParticipante = useAdicionarParticipante();
   const mensagemDeError = useMensagemDeError();
-  
+
   const submiterFormulario = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
 
