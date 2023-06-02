@@ -5,6 +5,12 @@ export const listaParticipantesState = atom<string[]>({
     default: [],
 });
 
+export const resultadoDoAmigoSecreto = atom<Map<string, string>>({
+    key: 'resultadoDoAmigoSecreto',
+    default: new Map(),
+});
+
+
 export const errorState = atom<string>({
     key: 'errorState',
     default: '',
