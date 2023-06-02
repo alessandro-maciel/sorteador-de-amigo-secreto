@@ -10,6 +10,14 @@ jest.mock('react-router-dom', () => {
     }
 });
 
+const mockSorteio = jest.fn();
+
+jest.mock('../../state/hooks/useSorteador', () => {
+    return {
+        useSorteador: () => mockSorteio
+    }
+});
+
 describe('A pagina de configuracao', () => {
     test('Deve ser renderizada corretamente', () => {
        const {container} = render(<RecoilRoot>

@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { useListaDeParticipantes } from "../../state/hooks/useListaDeParticipantes";
+import { useSorteador } from "../../state/hooks/useSorteador";
 
 export default function Rodape() {
   const participantes = useListaDeParticipantes();
   const navigate = useNavigate();
+  const sortear = useSorteador();
 
   const iniciar = () => {
-    return navigate('/sorteio');
+    sortear();
+    navigate('/sorteio');
   }
 
   return (

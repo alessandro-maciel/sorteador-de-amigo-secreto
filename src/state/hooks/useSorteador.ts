@@ -3,7 +3,7 @@ import { useSetRecoilState } from "recoil";
 import { resultadoDoAmigoSecreto } from "../atom";
 import realizarSorteio from "../helpers/realizarSorteio";
 
-export default function useSorteador() {
+export const useSorteador = () => {
   const setResultado = useSetRecoilState(resultadoDoAmigoSecreto);
   const participantes = useListaDeParticipantes();
 
