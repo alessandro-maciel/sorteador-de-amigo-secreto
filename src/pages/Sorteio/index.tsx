@@ -31,6 +31,7 @@ export default function Sorteio() {
                     value={participanteDaVez}
                     onChange={evento => setParticipanteDaVez(evento.target.value)}
                 >
+                    <option>Selecione um participante</option>
                     {participantes.map(participante => <option key={participante}>{participante}</option>)}
                 </select>
                 <button>Sortear</button>
